@@ -1,0 +1,12 @@
+services:
+- type: web
+  name: backend-normes
+  env: node
+  plan: free
+  buildCommand: npm install
+  startCommand: npm run start
+  envVars:
+    - key: MONGODB_URI
+      sync: false
+    - key: LEGIFRANCE_API_KEY
+      sync: false
